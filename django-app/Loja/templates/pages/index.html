@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Electro Art</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Electro Art</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contacts</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+    <!--<form method="get" action="{% url 'busca' %}">
+        <input name="busca" type="search">
+        <button type="submit">Pesquisar</button>
+    </form> -->
+    
+    <form method='post' action='{% url "adicionar" %}' enctype="multipart/form-data"> {% csrf_token %}
+
+
+        <p>Nome</p>
+        <input name='nome' type="text">
+        <p>Preço</p>
+        <input name='preco' type="number">
+        <p>Imagem</p>
+        <input name='imagem' type="file">
+        <p>Descrição</p>
+        <textarea name="descricao" id="" cols="30" rows="10"></textarea>
+        <button type="submit">Adicionar</button>
+
+    </form>
+
+    <div class="container">
+        {% for produto in produtos %}
+        <div class="item">
+            <img src="{{produto.image.url}}">
+            <p>{{produto.name}}</p>
+            <span>{{produto.price}}</span>
+        </div>
+        {% endfor %}
+    </div>
+
+    <footer>
+        <p>Desenvolvido por Electro Art</p>
+    </footer>
+
+</body>
+</html>

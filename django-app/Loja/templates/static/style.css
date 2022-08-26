@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: rgb(41, 2, 88);
+}
+
+header {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(60,9,121,1) 51%, rgba(94,0,255,1) 100%);
+    padding: 180px 0;
+} header > h1 {
+    font-family: monospace;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(60,9,121,1) 51%, rgba(94,0,255,1) 100%);
+}
+
+ul {
+    padding-bottom: 25px;
+    display: flex;
+}
+
+ul > li {
+    margin: 5px;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+}
+
+ul > li > a {
+    color: white;
+    transition: 0.8s;
+    display: block;
+    padding: 5px 25px;
+} ul > li > a:hover {
+    background: black;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 12px;
+    place-items: center;
+    margin-top: 4%;
+    background-color: #121212;
+    padding: 30px 0;
+    margin: 4%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;}
+
+.item {
+    font-family: sans-serif;
+    transition: 0.5s;
+    color: white;
+} .item:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    transform: translateY(-5px);
+    filter: blur(1px);
+}
+
+.item > img {
+    height: 300px;
+    width: 300px;
+}
+
+.item > p {
+    font-weight: bolder;
+}
+
+footer {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(60,9,121,1) 51%, rgba(94,0,255,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+footer > p {
+    color: white;
+    font-size: 1.2rem;
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+form {
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
